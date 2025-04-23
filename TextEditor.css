@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #e2e8f0;
+  }
+  
+  .editor-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    animation: fadeInUp 0.5s ease;
+  }
+  
+  .editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .editor-buttons button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #334155;
+    border: none;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .editor-buttons button:hover {
+    background-color: #475569;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .editor-content {
+    background-color: #0f172a;
+    padding: 15px;
+    min-height: 400px;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid #334155;
+  }
+  
+  .share-url-wrapper {
+    animation: slideFade 0.4s ease;
+  }
+  
+  .social-share-buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 0;
+  }
+  
+  .social-share-buttons svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .social-share-buttons svg:hover {
+    transform: scale(1.15);
+  }
+  
+  @keyframes slideFade {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ✅ Mobile Responsive Tweaks */
+  @media (max-width: 600px) {
+    .editor-container {
+      margin: 10px;
+      padding: 16px;
+    }
+  
+    .editor-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    .editor-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  
+    .editor-buttons button {
+      margin: 0;
+    }
+  
+    .share-url-wrapper,
+    .social-share-buttons {
+      width: 100%;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+  
